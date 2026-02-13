@@ -1,0 +1,43 @@
+{
+  "name": "@studiometa/oxlint-config",
+  "version": "0.1.0",
+  "description": "Shared oxlint configuration for Studio Meta projects",
+  "type": "module",
+  "main": "oxlintrc.json",
+  "exports": {
+    ".": "./oxlintrc.json"
+  },
+  "files": [
+    "oxlintrc.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "oxlint -c oxlintrc.json --print-config"
+  },
+  "author": "Studio Meta <agence@studiometa.fr> (https://www.studiometa.fr)",
+  "contributors": [
+    "Titouan Mathis <titouan@studiometa.fr>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiometa/oxlint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/studiometa/oxlint-config/issues"
+  },
+  "homepage": "https://github.com/studiometa/oxlint-config#readme",
+  "keywords": [
+    "oxlint",
+    "oxc",
+    "linter",
+    "config",
+    "studiometa"
+  ],
+  "peerDependencies": {
+    "oxlint": ">=0.16.0"
+  }
+}
