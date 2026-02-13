@@ -51,7 +51,6 @@ This config enables:
 |----------|-------|-------------|
 | `correctness` | error | Code that is outright wrong or useless |
 | `suspicious` | warn | Code that is most likely wrong or useless |
-| `pedantic` | warn | Lints which are rather strict or have occasional false positives |
 
 ### Key rules
 
