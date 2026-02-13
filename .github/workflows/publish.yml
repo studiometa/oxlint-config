@@ -46,12 +46,10 @@ jobs:
           echo "NPM_TAG=$NPM_TAG" >> $GITHUB_ENV
           echo "IS_PRERELEASE=$IS_PRERELEASE" >> $GITHUB_ENV
 
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          provenance: true
-          package: .
-          tag: ${{ env.NPM_TAG }}
-          token: ${{ secrets.NPM_TOKEN }}
+      - name: Publish to npm
+        run: npm publish --provenance --access public --tag ${{ env.NPM_TAG }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - uses: ncipollo/release-action@v1
         with:
