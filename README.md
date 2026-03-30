@@ -50,6 +50,7 @@ Add or override rules in your project config:
 
 ### Plugins
 
+- **typescript** — TypeScript-specific best practices and type safety
 - **unicorn** — Modern JavaScript best practices
 - **jsdoc** — JSDoc comment validation
 
@@ -70,6 +71,28 @@ Add or override rules in your project config:
 - `require-property`, `require-property-name`, `require-property-type`
 - `check-property-names`, `check-tag-names`
 
+**TypeScript** (matching `@typescript-eslint` rules):
+
+*Safety (error/warn)*:
+- `no-explicit-any`, `no-unsafe-*`: Prevent `any` from spreading through the codebase
+- `no-misused-promises`: Catch async functions passed where sync is expected
+- `only-throw-error`, `restrict-plus-operands`: Enforce correct types in operations
+- `ban-ts-comment`, `prefer-ts-expect-error`: Discourage `@ts-ignore`, prefer `@ts-expect-error`
+- `switch-exhaustiveness-check`: Ensure all union/enum members are handled
+
+*Best practices (warn)*:
+- `consistent-type-imports/exports`: Use `import type`/`export type` for type-only imports
+- `prefer-optional-chain`, `prefer-nullish-coalescing`: Modern TypeScript operators
+- `no-unnecessary-*`: Remove redundant type assertions, conditions, and conversions
+- `no-require-imports`, `no-var-requires`: Enforce ES module imports
+- `require-await`, `return-await`: Proper async/await usage
+
+*Style (warn)*:
+- `consistent-type-definitions`, `array-type`: Consistent type syntax
+- `no-inferrable-types`, `no-empty-object-type`: Clean type annotations
+- `prefer-for-of`, `prefer-find`, `prefer-readonly`: Modern TypeScript patterns
+- `adjacent-overload-signatures`, `no-namespace`: Code organization
+
 **Unicorn** (matching `eslint-plugin-unicorn` rules):
 - Prefer modern DOM APIs (`querySelector`, `append`, `remove`, etc.)
 - Prefer modern array methods (`find`, `flat`, `flatMap`, `some`, `includes`)
@@ -80,7 +103,7 @@ Add or override rules in your project config:
 
 The following `@studiometa/eslint-config` rules have no oxlint equivalent and require ESLint:
 
-- `dot-notation`, `no-implicit-coercion`, `no-implicit-globals`, `no-multi-spaces`
+- `no-implicit-coercion`, `no-implicit-globals`, `no-multi-spaces`
 - `no-param-reassign`, `no-useless-return`, `object-shorthand`
 - `prefer-const`, `prefer-template`, `strict`, `wrap-iife`
 - `unicorn/no-array-push-push`, `unicorn/prefer-at`, `unicorn/prefer-default-parameters`
