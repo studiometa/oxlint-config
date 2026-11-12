@@ -78,6 +78,11 @@ jobs:
         with:
           ref: refs/tags/${{ needs.release.outputs.version }}
 
+      # Trusted publishing needs npm 11.5.1 or later: Node.js 24 has it.
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: "24"
+
       # Trusted publishing (OIDC): no npm token. A prerelease goes to `next`.
       - uses: JS-DevTools/npm-publish@0fd2f4369c5d6bcfcde6091a7c527d810b9b5c3f # v4.1.5
         with:
