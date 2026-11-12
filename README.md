@@ -89,6 +89,26 @@ The following `@studiometa/eslint-config` rules have no oxlint equivalent and re
 
 See [oxlintrc.json](./oxlintrc.json) for the complete rule list.
 
+## Contributing
+
+Do not edit `CHANGELOG.md`. Add a fragment in `.changelog/<slug>.md`, where the slug is your branch name without its prefix, with `###` Keep a Changelog sections:
+
+```markdown
+### Changed
+
+- Breaking: Require oxlint 1.0.0 or later
+```
+
+Do not write the pull request number: the release adds it. A pull request that changes `oxlintrc.json` or `package.json` needs a fragment, unless it has the `no-changelog` label. See [`weareikko/changelog`](https://github.com/weareikko/changelog) for the format.
+
+## Release
+
+Each merge into `main` releases with the `Release` workflow (`publish.yml`): it folds the fragments into `CHANGELOG.md`, bumps the version, tags, creates the GitHub release and publishes to npm with trusted publishing. Without a fragment, nothing is released. On 0.x, a breaking entry gives a minor version and any other entry a patch version. To force a bump:
+
+```bash
+gh workflow run publish.yml -f version=minor   # or patch / major
+```
+
 ## License
 
 MIT © [Studio Meta](https://www.studiometa.fr)
