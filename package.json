@@ -38,6 +38,6 @@
     "studiometa"
   ],
   "peerDependencies": {
-    "oxlint": ">=0.16.0"
+    "oxlint": ">=1.0.0"
   }
 }
