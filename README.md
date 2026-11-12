@@ -83,7 +83,7 @@ The following `@studiometa/eslint-config` rules have no oxlint equivalent and re
 - `dot-notation`, `no-implicit-coercion`, `no-implicit-globals`, `no-multi-spaces`
 - `no-param-reassign`, `no-useless-return`, `object-shorthand`
 - `prefer-const`, `prefer-template`, `strict`, `wrap-iife`
-- `unicorn/no-array-push-push`, `unicorn/prefer-at`, `unicorn/prefer-default-parameters`
+- `unicorn/no-array-push-push`, `unicorn/no-for-loop`, `unicorn/prefer-at`, `unicorn/prefer-default-parameters`
 - `unicorn/prefer-keyboard-event-key`
 - Most `jsdoc/*` formatting rules (`check-alignment`, `multiline-blocks`, `no-multi-asterisks`, etc.)
 
